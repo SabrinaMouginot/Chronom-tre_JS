@@ -1,7 +1,7 @@
 
+var sp = document.getElementsByTagName("span");
 var btn_start=document.getElementById("start");
-
-var t;
+var btn_stop=document.getElementById("stop");
 var ms=0,s=0,mn=0,h=0;
 
 
@@ -38,3 +38,9 @@ ms+=1;
 
   }
 
+/*on arrête le "timer" par clearInterval ,on réactive le bouton start */
+function stop(){
+    clearInterval(t);
+    btn_start.disabled=false;
+        
+    }

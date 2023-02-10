@@ -9,7 +9,7 @@ var ms=0,s=0,mn=0,h=0;
 
 function start(){
 t =setInterval(update_chrono,100);
-btn_start=true;
+btn_start.disabled=true;
 
 }
 
@@ -35,6 +35,6 @@ ms+=1;
        sp[1].innerHTML=mn+" min";
        sp[2].innerHTML=s+" s";
        sp[3].innerHTML=ms+" ms";
-//Source : www.exelib.net
+
   }
 

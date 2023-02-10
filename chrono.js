@@ -9,7 +9,7 @@ var ms=0,s=0,mn=0,h=0;
 
 function start(){
 t =setInterval(update_chrono,100);
-btn_start.disabled=true;
+btn_start=true;
 
 }
 
@@ -41,6 +41,18 @@ ms+=1;
 /*on arrête le "timer" par clearInterval ,on réactive le bouton start */
 function stop(){
     clearInterval(t);
-    btn_start.disabled=false;
-        
-    }
+    btn_start=false;
+}
+
+/*dans cette fonction on arrête le "timer" ,on réactive le bouton "start" et on initialise les variables à zéro */
+function reset(){
+    clearInterval(t);
+    btn_start=false;
+    ms=0,s=0,mn=0,h=0;
+    /*on accède aux différents span par leurs indice*/
+    sp[0].innerHTML=h+" h";
+    sp[1].innerHTML=mn+" min";
+    sp[2].innerHTML=s+" s";
+    sp[3].innerHTML=ms+" ms";
+}
+ 
